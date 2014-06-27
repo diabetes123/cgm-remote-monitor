@@ -371,9 +371,9 @@
                 focus.append('line')
                     .attr('class', 'high-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale(180))
+                    .attr('y1', yScale(140))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale(180))
+                    .attr('y2', yScale(140))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -381,9 +381,9 @@
                 focus.append('line')
                     .attr('class', 'low-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale(80))
+                    .attr('y1', yScale(70))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale(80))
+                    .attr('y2', yScale(70))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
