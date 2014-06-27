@@ -82,7 +82,7 @@
         yAxis = d3.svg.axis()
             .scale(yScale)
             .tickFormat(d3.format('d'))
-            .tickValues([40, 60, 80, 120, 180, 300, 400])
+            .tickValues([40, 60, 80, 120, 140, 180, 300, 400])
             .orient('left');
 
         xAxis2 = d3.svg.axis()
@@ -93,7 +93,7 @@
         yAxis2 = d3.svg.axis()
             .scale(yScale2)
             .tickFormat(d3.format('d'))
-            .tickValues([40, 60, 80, 120, 180, 300, 400])
+            .tickValues([40, 60, 80, 120, 140, 180, 300, 400])
             .orient('right');
 
         // setup a brush
