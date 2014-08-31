@@ -38,7 +38,7 @@
         MINUTES_SINCE_LAST_UPDATE_URGENT = 20;
 
     // Tick Values
-    var tickValues = [40, 60, 80, 120, 180, 300, 400];
+    var tickValues = [40, 60, 80, 120, 140, 180, 300, 400];
     if (browserSettings.units == "mmol") {
         var tickValues = [2.0, 3.0, 4.0, 6.0, 10.0, 15.0, 22.0];
     }
@@ -46,8 +46,8 @@
       .attr("class", "tooltip")
       .style("opacity", 0);
     //TODO: get these from the config
-    var targetTop = 180,
-        targetBottom = 80;
+    var targetTop = 140,
+        targetBottom = 70;
 
     var futureOpacity = d3.scale.linear( )
         .domain([TWENTY_FIVE_MINS_IN_MS, SIXTY_MINS_IN_MS])
@@ -526,9 +526,9 @@
                 focus.append('line')
                     .attr('class', 'high-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale(scaleBg(180)))
+                    .attr('y1', yScale(scaleBg(140)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale(scaleBg(180)))
+                    .attr('y2', yScale(scaleBg(140)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -536,9 +536,9 @@
                 focus.append('line')
                     .attr('class', 'low-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale(scaleBg(80)))
+                    .attr('y1', yScale(scaleBg(70)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale(scaleBg(80)))
+                    .attr('y2', yScale(scaleBg(70)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -572,9 +572,9 @@
                 context.append('line')
                     .attr('class', 'high-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale2(scaleBg(180)))
+                    .attr('y1', yScale2(scaleBg(140)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale2(scaleBg(180)))
+                    .attr('y2', yScale2(scaleBg(140)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -582,9 +582,9 @@
                 context.append('line')
                     .attr('class', 'low-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale2(scaleBg(80)))
+                    .attr('y1', yScale2(scaleBg(70)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale2(scaleBg(80)))
+                    .attr('y2', yScale2(scaleBg(70)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -629,18 +629,18 @@
                     .transition()
                     .duration(UPDATE_TRANS_MS)
                     .attr('x1', xScale(currentBrushExtent[0]))
-                    .attr('y1', yScale(scaleBg(180)))
+                    .attr('y1', yScale(scaleBg(140)))
                     .attr('x2', xScale(currentBrushExtent[1]))
-                    .attr('y2', yScale(scaleBg(180)));
+                    .attr('y2', yScale(scaleBg(140)));
 
                 // transition low line to correct location
                 focus.select('.low-line')
                     .transition()
                     .duration(UPDATE_TRANS_MS)
                     .attr('x1', xScale(currentBrushExtent[0]))
-                    .attr('y1', yScale(scaleBg(80)))
+                    .attr('y1', yScale(scaleBg(70)))
                     .attr('x2', xScale(currentBrushExtent[1]))
-                    .attr('y2', yScale(scaleBg(80)));
+                    .attr('y2', yScale(scaleBg(70)));
 
                 // transition open-top line to correct location
                 focus.select('.open-top')
