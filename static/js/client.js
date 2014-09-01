@@ -38,7 +38,7 @@
         MINUTES_SINCE_LAST_UPDATE_URGENT = 20;
 
     // Tick Values
-    var tickValues = [55, 70, 140, 200, 400];
+    var tickValues = [55, 70, 130, 200, 400];
     if (browserSettings.units == "mmol") {
         var tickValues = [2.0, 3.0, 4.0, 6.0, 10.0, 15.0, 22.0];
     }
@@ -46,7 +46,7 @@
       .attr("class", "tooltip")
       .style("opacity", 0);
     //TODO: get these from the config
-    var targetTop = 140,
+    var targetTop = 130,
         targetBottom = 70;
 
     var futureOpacity = d3.scale.linear( )
@@ -526,9 +526,9 @@
                 focus.append('line')
                     .attr('class', 'high-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale(scaleBg(140)))
+                    .attr('y1', yScale(scaleBg(130)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale(scaleBg(140)))
+                    .attr('y2', yScale(scaleBg(130)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -572,9 +572,9 @@
                 context.append('line')
                     .attr('class', 'high-line')
                     .attr('x1', xScale(dataRange[0]))
-                    .attr('y1', yScale2(scaleBg(140)))
+                    .attr('y1', yScale2(scaleBg(130)))
                     .attr('x2', xScale(dataRange[1]))
-                    .attr('y2', yScale2(scaleBg(140)))
+                    .attr('y2', yScale2(scaleBg(130)))
                     .style('stroke-dasharray', ('3, 3'))
                     .attr('stroke', 'grey');
 
@@ -629,9 +629,9 @@
                     .transition()
                     .duration(UPDATE_TRANS_MS)
                     .attr('x1', xScale(currentBrushExtent[0]))
-                    .attr('y1', yScale(scaleBg(140)))
+                    .attr('y1', yScale(scaleBg(130)))
                     .attr('x2', xScale(currentBrushExtent[1]))
-                    .attr('y2', yScale(scaleBg(140)));
+                    .attr('y2', yScale(scaleBg(130)));
 
                 // transition low line to correct location
                 focus.select('.low-line')
